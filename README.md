@@ -1,3 +1,6 @@
+just remove the <YOUR_BOT_TOKEN> and peast your bot api id
+
+https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates
 
 
 ---
