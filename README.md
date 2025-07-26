@@ -97,10 +97,10 @@ gswarm
 > 🛠️ You'll be prompted to input:
 
 * **Telegram Bot Token**: Example
-  `8398070087:AAH9wDVrTbNUxfcXs4cOPVZccx6OA_gCPuE`
+  `8398070087:AAH9wDVrTbNUxfcXs4c8PVZcox6OA_gCPuE`
 * **Chat ID**: Personal (`7437805216`) or Group (`-1002655547125`)
 * **EOA Address**: e.g.
-  `0x899Af841AC5f8FC1f99ffb2CD96acc3C725049ff`
+  `0x899Af841AC5f8FC1f99ffb2CD96acc3C725vhjnnf`
 
 ---
 
