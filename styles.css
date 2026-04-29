@@ -1,0 +1,56 @@
+:root {
+  --bg: #090909;
+  --bg-soft: #121212;
+  --gold: #c9a44c;
+  --emerald: #0e7a62;
+  --cream: #f8f2e8;
+  --text: #f4f0e8;
+  --muted: #bcae94;
+  --glass: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.15);
+  --shadow: 0 20px 50px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{scroll-behavior:smooth;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1200px,92%);margin:auto}
+.serif{font-family:'Playfair Display',serif}
+.bg-gradient{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 20% 20%, #17413555, transparent 45%),radial-gradient(circle at 80% 30%, #b4872f44, transparent 40%),linear-gradient(160deg,#080808,#14110d)}
+.noise{position:fixed;inset:0;z-index:-1;opacity:.05;background-image:url('https://www.transparenttextures.com/patterns/asfalt-light.png')}
+.loader{position:fixed;inset:0;background:#050505;display:grid;place-items:center;z-index:9999;transition:.8s}.loader.hide{opacity:0;visibility:hidden}
+.loader .ring{width:80px;height:80px;border:3px solid #ffffff22;border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cursor{width:18px;height:18px;border:1.5px solid var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s}
+.cursor.active{width:34px;height:34px;background:#c9a44c22}
+.nav{position:sticky;top:0;z-index:1000;backdrop-filter:blur(14px);background:#08080880;border-bottom:1px solid #ffffff12}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font-weight:700;letter-spacing:.08em}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:18px;flex-wrap:wrap}
+.nav-links a{font-size:.92rem;opacity:.9}.nav-links a:hover{color:var(--gold)}
+.hero{min-height:92vh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
+.hero-content{position:relative;padding:30px}
+.hero h1{font-size:clamp(2rem,7vw,5rem);line-height:1.05;margin-bottom:12px}
+.hero p{max-width:700px;margin:auto;color:var(--muted)}
+.btn{display:inline-block;margin-top:24px;padding:12px 22px;border-radius:999px;background:linear-gradient(90deg,var(--gold),#f0d79a);color:#141414;font-weight:600;box-shadow:var(--shadow)}
+.section{padding:90px 0}
+.section h2{font-size:clamp(1.8rem,4vw,3rem);margin-bottom:16px}
+.card{background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(8px);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:22px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.menu-filter{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.chip{padding:8px 14px;border-radius:999px;background:#ffffff0d;border:1px solid #ffffff22;cursor:pointer}
+.chip.active{background:var(--emerald)}
+.menu-item{transform-style:preserve-3d;transition:transform .25s}
+.menu-item:hover{transform:rotateX(3deg) rotateY(-4deg) translateY(-4px)}
+.badge{display:inline-block;background:var(--gold);color:#121212;padding:4px 10px;border-radius:20px;font-size:.75rem;font-weight:700}
+.timeline{border-left:2px solid #ffffff22;padding-left:20px;display:grid;gap:16px}
+.masonry{columns:1;column-gap:16px}.masonry .card{break-inside:avoid;margin-bottom:16px}
+@media (min-width:700px){.masonry{columns:3}}
+footer{padding:40px 0;color:#9f947e;border-top:1px solid #ffffff1a;margin-top:60px}
+.fade-in{opacity:0;transform:translateY(24px)}
+input,select,textarea{width:100%;margin-top:8px;padding:12px;background:#ffffff0d;border:1px solid #ffffff22;border-radius:12px;color:var(--text)}
+label{font-size:.9rem;color:var(--muted)}
+iframe{width:100%;height:320px;border:0;border-radius:16px}
